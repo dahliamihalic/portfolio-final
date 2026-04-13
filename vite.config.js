@@ -7,7 +7,7 @@ export default defineConfig({
     react(),
     dsv(),
   ],
-  base: '/dahlia-portfolio/', // Use '/' for custom domains
+  base: '/', 
   server: {
     fs: {
       strict: false, // Allow access to files outside the root
