@@ -1,0 +1,184 @@
+/* Navbar Styles */
+.navbar {
+  background-color: #b4c4ae;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed; /* Keep the navbar at the top */
+  top: 0;
+  width: 100%; /* Ensure the navbar takes the full width of the viewport */
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+/* Navbar Header */
+.navbar-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Logo */
+.navbar .logo {
+  font-size: 1.3rem;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-right: auto;
+}
+
+/* Menu Toggle Button */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Navbar List */
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; /* Center items vertically */
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  flex-grow: 5;
+}
+
+.navbar-menu li {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  margin: 0;
+}
+
+/* Navbar Links */
+.navbar-menu a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.navbar-menu a:hover {
+  color: #e5e8b6;
+}
+
+/* Dropdown Menu */
+.navbar-menu .dropdown {
+  position: relative; /* Ensure the dropdown menu is positioned relative to its parent */
+}
+
+.navbar-menu .dropdown-menu {
+  display: none; /* Hide the dropdown menu by default */
+  position: absolute; /* Position it relative to the parent */
+  top: 100%; /* Place it directly below the parent */
+  left: 0; /* Align it to the left of the parent */
+  background-color: #fff; /* Set background color */
+  border: 1px solid #ccc; /* Add a border */
+  border-radius: 5px; /* Add rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  z-index: 1000; /* Ensure it appears above other elements */
+  min-width: 150px; /* Set a minimum width for the dropdown */
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.navbar-menu .dropdown:hover .dropdown-menu {
+  display: block; /* Show the dropdown menu on hover */
+}
+
+.navbar-menu .dropdown-menu li {
+  padding: 10px; /* Add padding to each dropdown item */
+}
+
+.navbar-menu .dropdown-menu li a {
+  color: #333; /* Set text color */
+  text-decoration: none; /* Remove underline */
+  display: block; /* Make the link take up the full width */
+}
+
+.navbar-menu .dropdown-menu li a:hover {
+  color: #007bff; /* Change text color on hover */
+  background-color: #f0f0f0; /* Add a background color on hover */
+}
+
+/* Dark Mode Toggle Button */
+.theme-toggle {
+  background-color: transparent;
+  border: 2px solid #0073e6;
+  color: #0073e6;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  margin-left: 15px;
+}
+
+.theme-toggle:hover {
+  background-color: #0073e6;
+  color: #fff;
+}
+
+/* Dark Mode */
+.dark-mode .navbar {
+  background-color: #222;
+}
+
+.dark-mode .navbar a {
+  color: #ddd;
+}
+
+.dark-mode .navbar a:hover {
+  color: #4fa3ff;
+}
+
+.dark-mode .theme-toggle {
+  border-color: #ffa500;
+  color: #ffa500;
+}
+
+.dark-mode .theme-toggle:hover {
+  background-color: #ffa500;
+  color: #222;
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .navbar-menu.open {
+    display: flex;
+  }
+
+  .navbar-header{
+    width: 100%;
+  }
+
+  .menu-toggle {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .navbar-menu a {
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    width: 100%;
+    text-align: left;
+  }
+
+  .theme-toggle {
+    align-self: flex-end;
+  }
+}

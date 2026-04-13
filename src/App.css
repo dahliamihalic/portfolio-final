@@ -1,0 +1,16 @@
+:root {
+  --axis-text-color: #333; /* Default axis text color */
+  --axis-line-color: #ccc; /* Default axis line color */
+  --tick-hover-color: #666; /* Default tick hover color */
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  padding-top: 80px;
+}
