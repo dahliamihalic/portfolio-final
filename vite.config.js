@@ -7,7 +7,7 @@ export default defineConfig({
     react(),
     dsv(),
   ],
-  base: '/', 
+  base: '/portfolio-final/', 
   server: {
     fs: {
       strict: false, // Allow access to files outside the root
